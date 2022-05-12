@@ -1,7 +1,7 @@
 package reverse_string
 
-func reverse[T any](input []T) (result []T) {
-	result = make([]T, len(input))
+func reverse(input []rune) (result []rune) {
+	result = make([]rune, len(input))
 	copy(result, input)
 
 	iLimit := len(input) / 2
