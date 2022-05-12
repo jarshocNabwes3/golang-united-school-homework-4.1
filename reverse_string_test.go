@@ -8,7 +8,7 @@ import (
 
 func TestReverseString(t *testing.T) {
 	input := "Hello World\n" + " Worлd Heллo"
-	rvOutputExpected := "dlroW olleH\n" + "oллeH dлroW "
+	rvOutputExpected := "oллeH dлroW " + "\ndlroW olleH"
 
 	rvOutput := ReverseString(input)
 

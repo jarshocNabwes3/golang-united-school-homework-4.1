@@ -1,9 +1,5 @@
 package reverse_string
 
-import (
-	"strings"
-)
-
 func reverse[T any](input []T) (result []T) {
 	result = make([]T, len(input))
 	copy(result, input)
@@ -17,25 +13,10 @@ func reverse[T any](input []T) (result []T) {
 	return
 }
 
-func reverseLine(line string) (lineOut string) {
-	runes := []rune(line)
-
-	lineOut = string(reverse(runes))
-
-	return
-}
-
 func ReverseString(input string) (output string) {
-	lines := strings.Split(input, "\n")
-	for lineIdx := range lines {
-		line := lines[lineIdx]
+	runes := []rune(input)
 
-		lineReversed := reverseLine(line)
-
-		lines[lineIdx] = lineReversed
-	}
-
-	output = strings.Join(lines, "\n")
+	output = string(reverse(runes))
 
 	// solution goes here
 	return
