@@ -4,8 +4,8 @@ import (
 	"strings"
 )
 
-func reverse(input []rune) (result []rune) {
-	result = make([]rune, len(input))
+func reverse[T any](input []T) (result []T) {
+	result = make([]T, len(input))
 	copy(result, input)
 
 	iLimit := len(input) / 2
